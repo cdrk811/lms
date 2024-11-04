@@ -1,0 +1,38 @@
+<section id="sidebar" data-controller="admin--sidebar">
+  <%= link_to admin_admin_root_path, class: 'brand' do %>
+    <i class='bx bxs-smile icon'></i> AdminLMS
+  <% end %>
+  <ul class="side-menu">
+<!--    <li>-->
+      <%#= link_to admin_admin_root_path do %>
+<!--        <i class='bx bxs-home icon'></i> Homepage-->
+      <%# end %>
+<!--    </li>-->
+    <li class="divider" data-text="main">Main</li>
+    <li>
+      <a href="#"><i class='bx bxs-cog icon'></i> System Management <i class='bx bxs-chevron-right icon-right'></i></a>
+      <ul class="side-dropdown">
+        <li><%= link_to 'Domain', admin_domains_path %></li>
+      </ul>
+    </li>
+<!--    <li><a href="#"><i class='bx bxs-chart icon'></i> Charts</a></li>-->
+<!--    <li><a href="#"><i class='bx bxs-widget icon'></i> Widgets</a></li>-->
+<!--    <li class="divider">Table and forms</li>-->
+<!--    <li><a href="#"><i class='bx bx-table icon'></i> Tables</a></li>-->
+<!--    <li>-->
+<!--      <a href="#"><i class='bx bxs-notepad icon'></i> Forms <i class='bx bxs-chevron-right icon-right'></i></a>-->
+<!--      <ul class="side-dropdown">-->
+<!--        <li><a href="#">Basic</a></li>-->
+<!--        <li><a href="#">Select</a></li>-->
+<!--        <li><a href="#">Checkbox</a></li>-->
+<!--        <li><a href="#">Radio</a></li>-->
+<!--      </ul>-->
+<!--    </li>-->
+  </ul>
+  <div class="ads">
+    <div class="wrapper">
+      <a href="" class="btn-upgrade">Upgrade</a>
+      <p>Become a <span>PRO</span> member and enjoy <span>All Features</span></p>
+    </div>
+  </div>
+</section>
