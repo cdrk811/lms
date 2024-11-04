@@ -1,0 +1,32 @@
+<div class="d-flex justify-content-between">
+  <h5>Domain Management</h5>
+  <%= link_to 'New', new_admin_domain_path, class: 'btn btn-primary btn-sm text-white' %>
+</div>
+
+<div class="table-responsive mt-2">
+  <table class="table table-bordered table-striped table-hover text-center">
+    <thead class="table-dark">
+    <tr>
+      <th>Name</th>
+      <th>Genre</th>
+      <th>Status</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @domains.each do |domain| %>
+      <tr>
+        <td>
+          <%= domain.name %>
+        </td>
+        <td><%= domain.genre.capitalize if domain.genre %></td>
+        <td class="is-color-<%= domain.status %>"><%= domain.status.capitalize if domain.status %></td>
+        <td>
+          <%= link_to 'Edit', edit_admin_domain_path(domain), class: 'btn btn-success btn-sm' %>
+          <%= link_to 'Destroy', admin_domain_path(domain), class: 'btn btn-danger btn-sm text-white', data: { turbo_method: :delete } %>
+        </td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>
