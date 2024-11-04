@@ -16,22 +16,21 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-  if Rails.root.join("tmp/caching-dev.txt").exist?
-    config.action_controller.perform_caching = true
-    config.action_controller.enable_fragment_cache_logging = true
-
-    config.cache_store = :memory_store
-    config.public_file_server.headers = {
-      "Cache-Control" => "public, max-age=#{2.days.to_i}"
-    }
-  else
-    config.action_controller.perform_caching = false
-
-    config.cache_store = :null_store
-  end
+  # config.cache_store = :redis_cache_store, {
+  #   url: ENV.fetch('REDIS_URL', nil),
+  #   connect_timeout: 30, # Defaults to 20 seconds
+  #   read_timeout: 1, # Defaults to 1 second
+  #   write_timeout: 1, # Defaults to 1 second
+  #   reconnect_attempts: 1, # Defaults to 0
+  #
+  #   error_handler: lambda { |method:, returning:, exception:|
+  #     Rails.logger.error "[Redis] exception: #{exception}, method: #{method}, returning: #{returning}"
+  #   }
+  # }
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
@@ -58,6 +57,7 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+  config.hosts.clear
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
