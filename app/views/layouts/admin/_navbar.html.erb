@@ -1,0 +1,57 @@
+<!--<nav class="admin-navbar navbar navbar-dark bg-dark-left-right navbar-expand-lg flex-nowrap">-->
+<!--  <div class="container-fluid d-flex">-->
+<!--    <div class="d-flex align-items-center">-->
+<!--      <button class="navbar-toggler me-2 d-block" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--        <span class="navbar-toggler-icon"></span>-->
+<!--      </button>-->
+<%#= link_to t('view.common.management_center'), admin_admin_root_path, class: 'navbar-brand fs-4 d-none d-sm-block' %>
+<!--    </div>-->
+<!--    <div class="collapse navbar-collapse show">-->
+<!--      <ul class="navbar-nav ms-auto flex-row justify-content-end">-->
+<!--        <li class="nav-item dropdown">-->
+<%#= link_to current_admin_user.username, 'javascript:void(0)', class: 'nav-link active dropdown-toggle mx-2', data: { bs_toggle: 'dropdown' } %>
+<!--          <ul class="dropdown-menu position-absolute left-initial end-0">-->
+<!--            <li>-->
+<%# # 登出 %>
+<%#= button_to "Log out", destroy_admin_user_session_path, data: { turbo: false }, method: :delete, class: 'dropdown-item' %>
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</nav>-->
+
+<nav>
+  <i class="bx bx-menu toggle-sidebar"></i>
+  <form action="#">
+    <div class="form-group">
+      <input type="text" placeholder="Search...">
+      <i class="bx bx-search icon"></i>
+    </div>
+  </form>
+  <a href="#" class="nav-link">
+    <i class="bx bxs-bell icon"></i>
+    <span class="badge">5</span>
+  </a>
+  <a href="#" class="nav-link">
+    <i class="bx bxs-message-square-dots icon"></i>
+    <span class="badge">8</span>
+  </a>
+  <span class="divider"></span>
+  <div class="profile">
+    <img src="https://www.istockphoto.com/photo/portrait-of-young-asian-business-woman-in-outdoors-gm1783956687-547160173" alt="">
+    <ul class="profile-link">
+      <li><a href="#"><i class="bx bxs-user-circle icon"></i> Profile</a></li>
+      <li><a href="#"><i class="bx bxs-cog"></i> Settings</a></li>
+      <li>
+        <%= link_to destroy_admin_user_session_path,
+                    data: { turbo_method: :delete,
+                            turbo_confirm: 'Are you sure you want to logout?' } do %>
+          <i class="bx bxs-log-out-circle"></i> Logout
+        <% end %>
+<!--        <a href="#"><i class="bx bxs-log-out-circle"></i> Logout</a>-->
+      </li>
+    </ul>
+  </div>
+</nav>

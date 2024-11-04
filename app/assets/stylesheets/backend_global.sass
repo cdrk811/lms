@@ -1,0 +1,242 @@
+//@import icomoon/style.sass
+
+// 遊戲狀態：已撤銷
+.is-color-revoked
+  color: #cdcecf !important
+
+// 遊戲狀態：已完成
+.is-color-completed
+  color: #1fa768 !important
+
+// 現場藍 & 辦公室藍
+.is-color-site_blue, .is-color-office_blue, .is-color-blue
+  color: #007dff !important
+
+// 現場紅 & 辦公室紅
+.is-color-site_red, .is-color-office_red, .is-color-red, .is-color-win
+  color: #dc0a0a !important
+
+// 現場和局 & 辦公室和局
+.is-color-site_tie, .is-color-office_tie, .is-color-tie, .is-color-lose
+  color: #5AAF21 !important
+
+// 開關
+.is-color-active
+  &:before
+    content: ""
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    margin-right: 5px
+    display: inline-block
+    background-color: #1fa768 !important
+.is-color-closed
+  &:before
+    content: ""
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    margin-right: 5px
+    display: inline-block
+    background-color: #dc0a0a !important
+
+a
+  text-decoration: none
+  &:hover
+    text-decoration: none
+.color-inherit
+  color: inherit !important
+.left-initial
+  left: initial !important
+.form-label
+  margin-bottom: 0
+.dropdown-menu
+  --bs-dropdown-min-width: auto
+ul
+  padding-left: 0.25rem !important
+.flash
+  margin-left: -0.75rem
+  margin-right: -0.75rem
+  .alert
+    border-radius: 0
+
+.w-screen
+  width: 100vw
+.h-screen
+  height: calc(100vh - 70px)
+
+.break-words
+  white-space: initial
+  word-wrap: break-word
+  overflow-wrap: break-word
+
+.per-page-dropdown
+  display: inline-block
+  position: relative
+  margin: auto 3px
+
+  button
+    background-color: white
+    color: #1d4ed8
+    padding: 0.6rem
+    display: inline-flex
+    align-items: center
+    border-width: 1px
+    border-color: #d4d4d8
+    line-height: 1.25rem
+
+    &:hover
+      background-color: #e4e4e7
+
+    span
+      margin-right: 0.25rem
+
+    i
+      fill: #1a1818
+      height: 1rem
+      width: 1rem
+
+
+  .dropdown-menu
+    position: absolute
+    display: none
+    color: #1d4ed8
+    bottom: 0px
+    left: 0px
+    transform: translateY(-2.6rem)
+    width: 100%
+    text-align: center
+    border: 1px solid #d4d4d8
+
+    li
+      background-color: white
+      padding: 0.5rem
+      border-width: 1px
+      &:hover
+        background-color: #e4e4e7
+        display: block
+        white-space: nowrap
+
+      a
+        display: block
+
+.per-page-dropdown:hover
+  .dropdown-menu
+    display: block
+
+.pagination
+  display: flex
+
+  .current
+    background-color: #0000ff
+    padding: 0.5rem 0.9rem
+    color: #ffffff
+    &:hover
+      background-color: #0000ff
+
+  span
+    border: 1px solid #d4d4d8
+    &:hover
+      background-color: #e4e4e7
+
+    a
+      padding: 0.5rem 0.75rem
+      display: block
+
+.paginate-control
+  >div
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-wrap: wrap
+    >*
+      margin-bottom: 10px
+.btn
+  &.btn-transparent
+    display: block
+    background-color: transparent
+    &.btn-color-white
+      color: #fff
+    &.btn-color-black
+      color: #000
+    &.btn-color-white-gray
+      color: rgba(255,255,255,.7)
+    &.btn-color-black-gray
+      color: rgba(0,0,0,.6)
+
+    &:hover
+      &.btn-color-white
+        background-color: rgba(255,255,255,.1)
+      &.btn-color-black
+        background-color: rgba(0,0,0,.1)
+      &.btn-color-white-gray
+        color: rgba(255,255,255,.9)
+        background-color: rgba(255,255,255,.1)
+      &.btn-color-black-gray
+        color: rgba(0,0,0,.8)
+        background-color: rgba(0,0,0,.1)
+
+
+.bg-dark-left-right
+  background: linear-gradient(135deg, #22252C 0%,#515764 100%)
+.bg-dark-bottom-top
+  background: linear-gradient(135deg, #515663 0%,#22252C 100%)
+
+
+.bg-gray-left-right
+  background: linear-gradient(135deg, #8C7C51  0%,#AFA28F 100%)
+.bg-gray-bottom-top
+  background: linear-gradient(135deg, #AFA28F 0%,#8D7D52 100%)
+
+
+.bg-light-left-right
+  background: linear-gradient(135deg, #DFDFDF 0%,#F2F0F0 100%)
+.bg-light-bottom-top
+  background: linear-gradient(135deg, #F1EFEF 0%,#E0E0E0 100%)
+
+.bg-top-to-light
+  background: linear-gradient(to bottom, transparent 0%,rgba(255,255,255,.1) 100%)
+.bg-top-to-dark
+  background: linear-gradient(to bottom, transparent 0%,rgba(127,127,127,.1) 100%)
+.w-30px
+  width: 30px
+
+button
+  .show-when-disabled
+    display: none
+  .show-when-enabled
+    display: initial
+  &:disabled
+    .show-when-disabled
+      display: initial
+    .show-when-enabled
+      display: none
+
+.select2-container
+  height: 100%
+.select2-container--default.select2-container--focus .select2-selection--multiple
+  color: #212529
+  background-color: #fff
+  border-color: #86b7fe
+  outline: 0
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25)
+.select2-container--default
+  .select2-results__options
+    padding-left: 0 !important
+  .select2-selection--multiple
+    overflow: auto
+    max-height: 38px
+    height: 100%
+    border: 1px solid #ced4da
+    border-radius: 0.375rem
+    .select2-selection__rendered
+      height: 100%
+      vertical-align: sub
+    .select2-selection__choice
+      margin-top: 0
+      margin-bottom: 0
+      align-self: center
+    .select2-search.select2-search--inline
+      height: 100%
+      line-height: 100%
+      vertical-align: middle

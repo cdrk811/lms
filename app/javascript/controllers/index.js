@@ -4,5 +4,14 @@
 
 import { application } from "./application"
 
+import Admin__NavbarController from "./admin/navbar_controller"
+application.register("admin--navbar", Admin__NavbarController)
+
+import Admin__ProgressBarController from "./admin/progress_bar_controller"
+application.register("admin--progress-bar", Admin__ProgressBarController)
+
+import Admin__SidebarController from "./admin/sidebar_controller"
+application.register("admin--sidebar", Admin__SidebarController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
